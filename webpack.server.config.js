@@ -6,7 +6,6 @@
  * Note: that prod and dev mode are set in npm scripts.
  */
  const path = require('path')
- const webpack = require('webpack')
  const nodeExternals = require('webpack-node-externals')
 
  module.exports = (env, argv) => {
@@ -23,6 +22,7 @@
        publicPath: '/',
        filename: '[name].js'
      },
+     devtool: 'source-map',
      mode: argv.mode,
      target: 'node',
      node: {
